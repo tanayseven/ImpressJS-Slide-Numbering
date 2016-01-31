@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>impress-slide-num | A slide numbering plugin for impress.js</title>
+
+    <meta name="description" content="impress-slide-num is a slide numbering plugin for impres js that can be used to jump to slides too" />
+    <meta name="author" content="Tanay PrabhuDesai">
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/impress-slide-num.css" rel="stylesheet" />
+
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+  <div id="welcome" class="step slide" data-x="-1000" data-y="-1000">
+    <h1>Welcome to the demo of <q>ImpressJS Slide Numbering</q></h1>
+  </div>
+  <div id="plugin" class="step slide little-text" data-x="0" data-y="-1000">
+    <span>This is a slide <strong>numbering plugin</strong> for impress.js</span>
+  </div>
+  <div id="numbers-in-corner" class="step" data-x="1000" data-y="-1000" data-rotate="90">
+    As you have already seen there are slide numbers on the top left corner of the slide
+  </div>
+  <div id="independent" class="step" data-x="0" data-y="0" data-rotate="270">
+    These slide numbers are independent of the slide <code>&lt;div&gt;</code>s that to represent a slide
+  </div>
+  <div id="theres-more" class="step" data-x="-500" data-y="0" data-rotate="270">
+    And, there is more to that...
+  </div>
+  <div id="enter-number" class="step" data-x="-1000" data-y="0" data-rotate="270">
+    You can jump to any slide you want by typing out the slide number
+  </div>
+  <div id="type-it" class="step slide" data-x="-2000" data-y="0" data-rotate="270">
+    Type the slide number and then press enter, Eg. <code>4</code> then <code>Enter</code>
+  </div>
+</div>
+
+<script src="js/impress.js"></script>
+<script src="js/impress-slide-num.js"></script>
+<script>var obj = impress(); obj.init(); initSlideNo(obj);</script>
+
+</body>
+</html>
