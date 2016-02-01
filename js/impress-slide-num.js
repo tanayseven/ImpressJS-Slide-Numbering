@@ -64,18 +64,21 @@ var initSlideNo = function (obj) {
       div.innerHTML = "<p id='slide-text'>"+slideNo+"</p>";
     });
 
-    document.addEventListener("keypress", function(e) {
-      if (e.keyCode >= 48 && e.keyCode <= 57) {
-        toSlideStr += (e.keyCode-48)+"";
+    var keyEventHandler = function(oEvent) {
+      var oEvent = oEvent || window.event;
+      var code = oEvent.keyCode || oEvent.charCode;
+      if (code >= 48 && code <= 57) {
+        toSlideStr += (code-48)+"";
         console.log(toSlideStr);
-      } else if (e.keyCode == 13) {
+      } else if (code == 13) {
         var toSlide = Number(toSlideStr);
         toSlideStr = "";
         if(toSlide < slides.length && toSlide > 0) {
-          // console.log(typeof(impress.goto));
           impressApi.goto(slides[toSlide-1]);
         }
       }
-    });
-    
+    };
+
+    document.addEventListener("keypress", keyEventHandler);
+
   };
