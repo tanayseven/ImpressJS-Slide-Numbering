@@ -73,7 +73,7 @@ var initSlideNo = function (obj) {
       } else if (code == 13) {
         var toSlide = Number(toSlideStr);
         toSlideStr = "";
-        if(toSlide < slides.length && toSlide > 0) {
+        if(toSlide <= slides.length && toSlide > 0) {
           impressApi.goto(slides[toSlide-1]);
         }
       }
