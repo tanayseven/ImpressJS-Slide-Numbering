@@ -3,6 +3,8 @@ Impress JS Slide Numbering Plugin
 
 This is a very simple plugin which can be copied and pasted into your Impress.JS presentation and then used directly to display the slide numbers and navigate slides using numbers on the keyboard.
 
+The demo for the working of this plugin is [Live!](http://tanayseven.github.io/ImpressJS-Slide-Numbering/)
+
 **Caution**
 
 This project is a very quick and dirty hack, it can be very buggy and done in a completely bad way.
